@@ -1,0 +1,1 @@
+https://github.com/BanKa000/slozhno-sosredotochitsya.git

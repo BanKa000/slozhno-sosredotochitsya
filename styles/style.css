@@ -1,5 +1,610 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: grid;
+  padding: min(2.666vi, 20px);
+
+  background-color: var(--main__color);
+  
+  background-image: var(--bcg__image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+  position: relative;
+  display: grid;
+  block-size: 100vh;
+  grid-template-rows: 1fr min-content 1fr;
+  min-height: 668px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--text__color__second);
+  border-bottom: 1px solid var(--text__color__second);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--text__color__second);
+  border-right: 1px solid var(--text__color__second);
+}
+
+.decoration-item {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--accent__color);
+  background-color: var(--accent__color);
+  block-size: 9px;
+  inline-size: 9px;
+  right: 9px;
+  top: 8px;
+}
+
+.decoration-item::before {
+  content: 'rec';
+  position: absolute;
+  color: var(--accent__color);
+  right: 20px;
+  bottom: -5px;
+  text-transform: uppercase;
+}
+
+/* BUTTONS */
+
+.header__theme-menu {
+  display: grid;
+  grid-row: 1;
+  justify-content: end;
+  align-items: center;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-content: center;
+  gap: 15px;
+
+  padding-bottom: 110px;
+
+  width: 70px;
+}
+
+.header__theme-menu-item {
+  font-family: "IBM Plex Mono", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+}
+
+.header__theme-menu-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: var(--text__color__second);
+  color: var(--text__color__second);
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button__color)
+}
+
+.header__theme-menu-button:focus-visible {
+  background-color: transparent;
+  border: none;
+  color: var(--text__color__second);
+  outline: 1px solid var(--text__color__second);
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--text__color__second);
+}
+
+/* HEADER TEXT */
+
+.header__text {
+  display: grid;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  align-items: start;
+
+  margin-top: -103px;
+}
+
+.header__second-text {
+  font-family: "IBM Plex Mono", serif;
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 95.7px;
+  text-align: left;
+
+  color: var(--title__color);
+  text-shadow: 4px 4px var(--shadow__color);
+
+}
+
+.header__title-text {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+
+  color: var(--text__color);
+  background-color: var(--accent__color);
+
+  margin-bottom: 24px;
+}
+
+/* CONTENT */
+
+.content {
+  display: grid;
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+/* CARD */
+
+.description {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}
+
+.card-list-item {
+  padding-top: 20px;
+}
+
+/* LOTS */
+
+.lots {
+  display: grid;
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.lots__card-list {
+  display: grid;
+  gap: 20px;
+}
+
+/* Council */
+
+.council {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+
+  margin-top: 30px;
+
+  gap: 20px;
+}
+
+/* IMAGE */
+
+.images__section {
+  display: grid;
+  grid-template-rows: 1fr;
+  padding-top: 27px;
+}
+
+.card__images {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  padding-top: 10px;
+}
+
+.about__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FOOTER */
+
+.footer {
+  display: grid;
+  position: relative;
+
+  align-items: center;
+  justify-content: center;
+  
+  height: 100vh;
+  min-height: 668px;
+
+  margin-top: 52px;
+  
+}
+
+.footer__text {
+  font-family: "IBM Plex Mono", serif;
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 95.7px;
+  text-align: left;
+
+  color: var(--shadow__color);
+  text-shadow: 4px 4px var(--accent__color);
+
+  padding-bottom: 24px;
+}
+
+/* MAIN TEXT */
+
+.title__section-text {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+
+  color: var(--accent__color);
+}
+
+.text__title{ 
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+
+  color: var(--text__color);
+  background-color: var(--accent__color);
+}
+
+.text__section {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+
+  color: var(--text__color);
+
+  padding-top: 10px;
+}
+
+.text__title-second {
+  font-family: "IBM Plex Mono", serif;
+  font-size: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);;
+  font-weight: 700;
+  line-height: 23.4px;
+  text-align: left;
+  
+  color: var(--text__color);
+  background-color: var(--accent__color);
+}
+
+/* LINK */
+
+.text__section-link {
+  font-family: "IBM Plex Mono", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  text-align: left;
+
+  color: var(--text__color);
+  text-shadow: 2px 2px var(--accent__color);
+  text-decoration: none;
+}
+
+.text__section-link:hover {
+  border-bottom: 1px solid var(--text__color__second);
+  outline: none;
+}
+
+.text__section-link:focus {
+  border: 1px solid var(--text__color__second);
+  outline: none;
+}
+
+
+@media (width >= 768px) {
+  /* MAIN */
+
+  .page {
+    padding: 0;
+  }
+
+  .decoration-item {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px 2px var(--accent__color);
+    background-color: var(--accent__color);
+    block-size: 9px;
+    inline-size: 9px;
+    right: 29px;
+    top: 29px;
+  }
+  
+  .decoration-item::before {
+    content: 'rec';
+    position: absolute;
+    color: var(--accent__color);
+    right: 20px;
+    bottom: -5px;
+    text-transform: uppercase;
+  }
+
+  /* BUTTONS */
+
+.header__theme-menu-list {
+  padding-bottom: 35px;
+
+  width: 110px;
+}
+
+/* HEADER TEXT */
+
+.header__text {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  margin-top: -49px;
+}
+
+.header__second-text {
+  grid-row: 1;
+  grid-column: 1 / 3;
+
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}
+
+.header__title-text {
+  grid-column: 2;
+
+  inline-size: max(364px, 50%);
+
+  margin-bottom: 183px;
+  padding: 0px;
+}
+
+/* CONTENT */
+
+.content {
+  padding: min(2.666vi, 20px);
+  
+  margin-top: 30px;
+}
+
+.description {
+  grid-template-rows: 1fr;
+  grid-template-columns: 13em 2fr;
+
+  gap: 48px;
+
+  padding-top: 10px;
+}
+
+.card-list {
+  display: grid;
+
+  gap: 20px;
+}
+
+.card-list-item {
+  padding: 0;
+
+}
+
+/* LOTS */
+
+.lots {
+  grid-template-rows: 4em 1fr;
+  grid-template-columns: 10em 1fr;
+
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.lots_section {
+  grid-row: 2;
+  grid-column: 1 / 4;
+}
+
+/* COUNCIL */
+
+.council {
+  grid-template-rows: 1fr;
+  grid-template-columns: 16em 2fr;
+  gap: 0;
+
+  margin-top: 60px;
+}
+
+.council__card {
+  display: grid;
+  gap: 20px;
+}
+
+/* IMAGES */
+
+.images__section {
+  padding-top: 60px;
+}
+
+.card__images {
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-gap: 20px;
+
+  padding-top: 20px;
+}
+
+.image__sunset {
+  grid-column: 1/3;
+}
+.image__ice-cream {
+  grid-column: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.image__tape {
+  grid-column: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+.image__books {
+  grid-column: 2/2;
+}
+.image__street {
+  grid-column: 2/4;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-top: 41px;
+}
+
+.footer__text {
+  padding: 0;
+}
+
+/* OTHER */
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--text__color__second);
+  border-bottom: 1px solid var(--text__color__second);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--text__color__second);
+  border-right: 1px solid var(--text__color__second);
+}
+
+}
+
+@media (width >= 1024px) {
+
+  /* MAIN */
+
+  .header {
+  justify-items: center;
+  height: 100vh;
+  gap: 60px;
+  }
+
+  /* HEADER */
+
+  .header__title-text {
+    inline-size: max(355px, 96%);
+
+    margin-top: 11px;
+    margin-bottom: 0;
+}
+
+  /* BUTTONS */
+
+  .header__theme-menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 21px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  /* DESCRIPTION */
+
+  .description {
+    grid-template-columns: 18em 2fr;
+  }
+
+    /* LOTS */
+
+  .lots {
+    grid-template-rows: 4.1em 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    
+    gap: 0;
+  }
+
+  .lots__card-list-item {
+  min-width: 315px;
+  }
+
+  .lots__card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+    gap: 20px;
+  }
+
+  /* COUNCIL */
+
+  .council {
+   grid-template-columns: 21em 2fr;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    margin-top: 40px;
+  }
+
+  .footer__text {
+    font-size: 157px;
+    padding-bottom: 0;
+  }
+
+  /* OTHER */
+
+  .decorated-zone::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 25px;
+    height: 25px;
+    border-left: 1px solid var(--text__color__second);
+    border-bottom: 1px solid var(--text__color__second);
+  }
+  
+  .decorated-zone::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid var(--text__color__second);
+    border-right: 1px solid var(--text__color__second);
+  }
 }
