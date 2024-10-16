@@ -1,15 +1,18 @@
 .page.theme_light {
   /* TEXT */
+
   --title__color: #FFC2E6;
   --text__color: #353430;
   --text__color__second: #353430;
   --text__title__color: #353430;
+  --font__family: "IBM Plex Mono", sans-serif;
 
   /* BUTTON */
 
   --button__color: rgba(50, 49, 45, 0.4);
 
   /* BACKGROUND */
+  
   --main__color: #FFF1F7;
   --accent__color: #FF8DCB;
   --shadow__color: #FF0070;
@@ -29,16 +32,14 @@
   --title__color: #FFC2E6;
   --text__color: #353430;
   --text__color__second: #353430;
-
   /* BUTTON */
-
   --button__color: rgba(50, 49, 45, 0.4);
-
   /* BACKGROUND */
   --main__color: #FFF1F7;
   --accent__color: #FF8DCB;
   --shadow__color: #FF0070;
-  --text__title__color: #353430;;
+  --text__title__color: #353430;
+  --font__family: "IBM Plex Mono", sans-serif;
 
   --bcg__image: url(../images/cover-image-light.png);
  }

@@ -1,23 +1,21 @@
 .page.theme_dark {
   /* TEXT */
-  --title__color: #FF0070;
+
+  --title__color: #DB00FF;
   --text__color: #F1B2CE;
   --text__color__second: #FF0070;
   --text__title__color: #000028;
+  --font__family: "IBM Plex Mono", sans-serif;
 
   /* BUTTON */
 
   --button__color: rgba(255, 0, 112, 0.4);
 
   /* BACKGROUND */
+  
   --main__color: #000028;
   --accent__color: #FF0070;
-  --shadow__color: #DB00FF;
+  --shadow__color: #FF0070;
 
   --bcg__image: url(../images/cover-image-dark.png);
 }
-
-/* .page .decoration-item,
-.decoration-item::before {
-  display: block;
-} */

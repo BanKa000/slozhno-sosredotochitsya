@@ -13,13 +13,14 @@
     <link rel="icon" href="./images/mobile-icon.png" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-    <link rel="stylesheet" href="./styles/dark.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/light.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/dark.css" />
+    <link rel="stylesheet" href="./styles/light.css" />
   </head>
+
   <body class="page">
     <header class="header decorated-zone">
       <nav class="header__theme-menu">
@@ -49,18 +50,18 @@
         </ul>
       </nav>
       <div class="decoration-item" aria-hidden="true"></div>
-      <container class="header__text">
+      <div class="header__text">
         <h1 class="header__second-text">no focus</h1>
-        <div class="header__title-text">
+        <p class="header__title-text">
           Что делать, когда не можешь делать ничего <br />
           Или почему нам так сложно сконцентрироваться, особенно когда очень
           надо
-        </div>
-      </container>
+        </p>
+      </div>
     </header>
 
-    <section class="content">
-      <container class="description">
+    <main class="content">
+      <section class="description">
         <h2 class="title__section-text">Почему сосредоточиться так сложно</h2>
 
         <ul class="card-list">
@@ -92,9 +93,9 @@
             </p>
           </li>
         </ul>
-      </container>
+      </section>
 
-      <container class="lots">
+      <section class="lots">
         <h2 class="title__section-text">Что снижает концентрацию внимания?</h2>
         <div class="lots_section">
           <ul class="lots__card-list">
@@ -135,9 +136,9 @@
             </li>
           </ul>
         </div>
-      </container>
+      </section>
 
-      <container class="council">
+      <section class="council">
         <h2 class="title__section-text">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
@@ -150,7 +151,7 @@
 
           <ul class="card-list">
             <li class="card-list-item">
-              <h3 class="text__title-second">Представьте небо и облака</h3>
+              <h4 class="text__title-second">Представьте небо и облака</h4>
               <p class="text__section">
                 Или листья в ручье. Тут дело в лёгкой медитации, которая
                 помогает успокоиться. Ведь часто именно тревожные мысли о
@@ -163,7 +164,7 @@
               </p>
             </li>
             <li class="card-list-item">
-              <h3 class="text__title-second">Включите музыку</h3>
+              <h4 class="text__title-second">Включите музыку</h4>
               <p class="text__section">
                 Но не любую, и не любимую. Любимая может быть связана с сильными
                 положительными эмоциями, которые тоже очень сильно отвлекают.
@@ -172,7 +173,7 @@
               </p>
             </li>
             <li class="card-list-item">
-              <h3 class="text__title-second">Прогуляйтесь</h3>
+              <h4 class="text__title-second">Прогуляйтесь</h4>
               <p class="text__section">
                 Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
                 <a href="#" class="text__section-link">показал</a>, что
@@ -184,7 +185,7 @@
               </p>
             </li>
             <li class="card-list-item">
-              <h3 class="text__title-second">Хорошо ешьте</h3>
+              <h4 class="text__title-second">Хорошо ешьте</h4>
               <p class="text__section">
                 Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
                 которые препятствуют резким скачкам сахара в крови. Например, с
@@ -194,7 +195,7 @@
               </p>
             </li>
             <li class="card-list-item">
-              <h3 class="text__title-second">Читайте</h3>
+              <h4 class="text__title-second">Читайте</h4>
               <p class="text__section">
                 Настоящие бумажные книги. Это правда помогает с концентрацией:
                 чтобы прочитать пост в соцсети, достаточно нескольких минут или
@@ -204,9 +205,9 @@
             </li>
           </ul>
         </div>
-      </container>
+      </section>
 
-      <container class="images__section">
+      <section class="images__section">
         <h2 class="text__title">А можно в картинках?</h2>
         <div class="card__images">
           <img
@@ -235,11 +236,11 @@
             class="about__image image__street"
           />
         </div>
-      </container>
-    </section>
+      </section>
+    </main>
 
     <footer class="footer decorated-zone">
-      <p class="footer__text">focus</p>
+      <p class="header__second-text footer__text">focus</p>
     </footer>
 
     <script src="./scripts/script.js"></script>
