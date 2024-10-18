@@ -152,7 +152,7 @@
   gap: 36px;
 }
 
-.header__second-text {
+.main__second-text {
   font-family: var(--font__family);
   font-size: 116px;
   font-weight: 700;
@@ -160,12 +160,15 @@
   text-align: left;
 
   color: var(--title__color);
-  text-shadow: 4px 4px var(--shadow__color);
 
   padding: min(2.666vi, 20px);
   padding-bottom: 9px;
 
   margin-top: 0;
+}
+
+.header__shadow {
+  text-shadow: 4px 4px var(--shadow__color);
 }
 
 .header__title-text {
@@ -268,7 +271,7 @@
   
 }
 
-.shadow {
+.footer__shadow {
   text-shadow: 2px 2px var(--shadow__color);
 }
 
@@ -375,7 +378,7 @@
   margin-bottom: 557px;
 }
 
-.header__second-text {
+.main__second-text {
   grid-row: 1;
   grid-column: 1 / 3;
 
